@@ -1,0 +1,21 @@
+.login__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    .information {
+        text-align: center;
+        margin: 8px 0;
+
+        .form__help {
+            color: var(--bhd-color-text-blue);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .form__hours { 
+            color: var(--black);
+            font-weight: bold;
+        }
+    }
+}

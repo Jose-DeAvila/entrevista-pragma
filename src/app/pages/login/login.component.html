@@ -1,0 +1,22 @@
+<app-login-template>
+  <app-login-form [onSubmit]="onSubmit">
+    <app-input-group>
+      <app-input 
+        placeholder="Documento de identidad" 
+        iconName="icon-user" 
+        regex="^\d{1,11}$"
+        name="document"
+        (inputChange)="changeDocumentNumber($event)"></app-input>
+      <app-input 
+        placeholder="Contraseña" 
+        type="password" 
+        iconName="icon-password"
+        regex="^\w{8,}$"
+        (inputChange)="changePassword($event)"></app-input>
+    </app-input-group>
+    <app-switch-button (checkChanged)="changeWantsToSaveCredentials($event)" [text]="'RECUERDA MI USUARIO'" [name]="'remember'"></app-switch-button>
+    <app-button [background]="'var(--ion-color-primary)'">
+      INICIAR SESIÓN
+    </app-button>
+  </app-login-form>
+</app-login-template>

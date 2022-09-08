@@ -1,0 +1,33 @@
+@import url('../../../../theme/variables.scss');
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid var(--bhd-color-titles);
+    border-radius: 5px;
+    column-gap: 10px;
+    padding: 5px;
+
+    .container__icon {
+        color: var(--bhd-color-text);
+        font-size: 2em;
+    }
+
+    .container__input {
+        background-color: transparent;
+        color: var(--bhd-color-text);
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    &.error {
+        border: 1px solid var(--red-1);
+
+        .container__input::placeholder {
+            color: var(--red-1);
+        }
+    }
+}

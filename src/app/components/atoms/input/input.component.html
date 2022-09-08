@@ -1,0 +1,13 @@
+<label for={{name}} [ngClass]="{'container': true, 'error': hasErrors}">
+  <span class="bhd-icon {{iconName}} container__icon"></span>
+  <input 
+    name={{name}} 
+    id={{name}} 
+    class="container__input"
+    type={{type}} 
+    placeholder={{placeholder}}
+    value={{inputValue}}
+    (keyup)="onInputChange($event)"
+    pattern={{regex}}
+    required>
+</label>

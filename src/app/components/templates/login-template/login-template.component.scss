@@ -1,0 +1,40 @@
+.login {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 100px;
+    padding: 0 15px;
+
+    .login__logotype {
+        max-width: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .login__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .login__background-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
