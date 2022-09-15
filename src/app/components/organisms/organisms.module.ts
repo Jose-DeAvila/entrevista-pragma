@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { IonicModule } from '@ionic/angular';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
 @NgModule({
   declarations: [
-    LoginFormComponent
+    LoginFormComponent,
+    SideMenuComponent,
+    TabsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
-    LoginFormComponent
+    LoginFormComponent,
+    SideMenuComponent,
+    TabsComponent
   ]
 })
 export class OrganismsModule { }

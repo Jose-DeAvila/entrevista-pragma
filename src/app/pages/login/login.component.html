@@ -15,7 +15,7 @@
         (inputChange)="changePassword($event)"></app-input>
     </app-input-group>
     <app-switch-button (checkChanged)="changeWantsToSaveCredentials($event)" [text]="'RECUERDA MI USUARIO'" [name]="'remember'"></app-switch-button>
-    <app-button [background]="'var(--ion-color-primary)'">
+    <app-button [background]="'var(--green-main)'" [disabled]="isLoggingIn">
       INICIAR SESIÓN
     </app-button>
   </app-login-form>

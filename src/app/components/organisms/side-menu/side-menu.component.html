@@ -1,0 +1,87 @@
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="white">
+      <div class="user">
+        <ion-text>
+          <p class="user__name">{{userInfo.name}} {{userInfo.lastName}}</p>
+        </ion-text>
+        <ion-text>
+          <p class="user__option">Editar perfil <ion-icon name="pencil-outline"></ion-icon></p>
+        </ion-text>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon name="calculator-outline"></ion-icon>
+        <p class="item__data">
+          <span>Tarjeta de Claves Digital</span>
+          <span>Consulta tus códigos de autenticación</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit-outline"></ion-icon>
+        <p class="item__data">
+          <span>Configuración de acceso</span>
+          <span>Inicia con huella, Face ID, PIN o Patrón</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <p class="item__data">
+          <span>Configuración de seguridad</span>
+          <span>Clave de acceso y protección transaccional</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="server-outline"></ion-icon>
+        <p class="item__data">
+          <span>Edotar resumen</span>
+          <span>Ordena tus productos o agrega un alias</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="barcode-outline"></ion-icon>
+        <p class="item__data">
+          <span>Editar consulta rápida</span>
+          <span>Consulta tus productos sin iniciar sesión</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="options-outline"></ion-icon>
+        <p class="item__data">
+          <span>Ajustes generales</span>
+          <span>Personaliza tu aplicación</span>
+        </p>
+      </ion-item>
+      <hr>
+      <ion-item>
+        <ion-icon name="repeat-outline"></ion-icon>
+        <p class="item__data">
+          <span>Divisas</span>
+          <span>Tasas de cambio y Calculadora</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location-outline"></ion-icon>
+        <p class="item__data">
+          <span>Localizaciones</span>
+          <span>Ubica cajeros, sucursales y subagentes</span>
+        </p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <p class="item__data">
+          <span>Contactos</span>
+          <span>¿Necesitas comunicarte con nosotros?</span>
+        </p>
+      </ion-item>
+      <p class="item__version">Version: 1.0.0</p>
+      <hr>
+      <a href="" class="logout__button">CERRAR SESIÓN</a>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>

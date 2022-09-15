@@ -9,6 +9,7 @@ export class ButtonComponent implements OnInit {
 
   @Input() type: string;
   @Input() background: string;
+  @Input() disabled: boolean;
 
   constructor() { }
 

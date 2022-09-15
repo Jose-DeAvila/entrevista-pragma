@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { environment } from 'src/environments/environment';
@@ -26,13 +27,14 @@ const getBaseUrl = () => environment.backendUrl;
   providers: [
     {
       provide: RouteReuseStrategy,
-      useClass: IonicRouteStrategy
+      useClass: IonicRouteStrategy,
     },
     {
       provide: 'BASE_URL',
       useFactory: getBaseUrl,
       deps: []
-    }
+    },
+    CookieService
   ],
   bootstrap: [AppComponent],
 })

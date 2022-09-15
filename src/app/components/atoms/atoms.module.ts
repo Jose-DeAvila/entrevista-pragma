@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InputComponent } from './input/input.component';
 import { SwitchButtonComponent } from './switch-button/switch-button.component';
 import { ButtonComponent } from './button/button.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -13,7 +14,8 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
     InputComponent,

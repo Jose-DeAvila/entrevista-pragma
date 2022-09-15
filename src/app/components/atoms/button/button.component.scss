@@ -5,4 +5,8 @@ button {
     font-size: 1.1rem;
     padding: 16px 0;
     border-radius: 8px;
+
+    &:disabled {
+        cursor: no-drop;
+    }
 }
