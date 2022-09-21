@@ -1,3 +1,19 @@
-<p>
-  my-products works!
-</p>
+<header class="my-products__header">
+  <button class="header__menu-button" (click)="openMenu()">
+    <ion-icon class="menu-button__icon" name="menu-outline"></ion-icon>
+  </button>
+  <p class="header__title">Mis productos</p>
+</header>
+<main>
+  <div class="accounts">
+    <app-title-tag background="var(--green-main)">
+      CUENTAS ({{(products$ | async)?.filter(isAccount).length}})
+    </app-title-tag>
+    <div class="accounts__accounts-list">
+      <app-account-data *ngFor="let product of products$ | async" [product]="product"></app-account-data>
+    </div>
+  </div>
+  <app-title-tag background="var(--bhd-color-blue)">
+    TARJETAS DE CRÉDITO ({{(products$ | async)?.filter(isNotAccount).length}})
+  </app-title-tag>
+</main>

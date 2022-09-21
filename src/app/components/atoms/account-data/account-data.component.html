@@ -1,0 +1,18 @@
+<div class="account-data">
+  <div class="account-data__info">
+    <ion-icon *ngIf="
+      product.productType === 'CA' || 
+      product.productType === 'CC'" name="rocket-outline"></ion-icon>
+    <p>{{ product.productName }}</p>
+  </div>
+  <div class="account-data__balance">
+    <div class="balance__main">
+      <p class="main__currency">{{ product.currency }}$</p>
+      <p class="main__balance">
+        <span>{{ currentBalance.slice(0, currentBalance.length - 3) }}</span>
+        <span>{{ currentBalance.slice(-3) }}</span>
+      </p>
+    </div>
+    <p>Balance disponible</p>
+  </div>
+</div>

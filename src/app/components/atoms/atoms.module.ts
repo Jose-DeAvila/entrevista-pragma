@@ -4,6 +4,8 @@ import { InputComponent } from './input/input.component';
 import { SwitchButtonComponent } from './switch-button/switch-button.component';
 import { ButtonComponent } from './button/button.component';
 import { IonicModule } from '@ionic/angular';
+import { TitleTagComponent } from './title-tag/title-tag.component';
+import { AccountDataComponent } from './account-data/account-data.component';
 
 
 
@@ -11,7 +13,9 @@ import { IonicModule } from '@ionic/angular';
   declarations: [
     InputComponent,
     SwitchButtonComponent,
-    ButtonComponent
+    ButtonComponent,
+    TitleTagComponent,
+    AccountDataComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,9 @@ import { IonicModule } from '@ionic/angular';
   exports: [
     InputComponent,
     SwitchButtonComponent,
-    ButtonComponent
+    ButtonComponent,
+    TitleTagComponent,
+    AccountDataComponent
   ]
 })
 export class AtomsModule { }

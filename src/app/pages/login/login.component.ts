@@ -3,6 +3,10 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 import { ToastController } from '@ionic/angular';
 import { LoginResponse } from 'src/app/core/models/auth.interfaces';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/core/models/products.interfaces';
+import { setProducts } from 'src/state/products/products.actions';
+import { Store } from '@ngrx/store';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +20,12 @@ export class LoginComponent implements OnInit {
   wantsToSaveCredentials: boolean;
   isLoggingIn: boolean;
 
-  constructor(private auth: AuthService, private toastController: ToastController, private router: Router) { }
+  constructor(
+    private auth: AuthService,
+    private toastController: ToastController,
+    private router: Router,
+    private store: Store,
+    private productsService: ProductsService) { }
 
   async presentToast(position: 'top' | 'middle' | 'bottom', color: 'danger' | 'success', text: string) {
     const toast = await this.toastController.create({
@@ -42,7 +51,14 @@ export class LoginComponent implements OnInit {
     this.wantsToSaveCredentials = isChecked;
   }
 
+  setProducts(products: Product[]){
+    this.store.dispatch(setProducts({ products }));
+  }
+
   async sendToAnotherPage(response: LoginResponse){
+    this.productsService.getProducts().subscribe(data => {
+      this.setProducts(data.products);
+    });
     this.auth.saveUserInfo(response);
     this.router.navigateByUrl('/dashboard');
   }

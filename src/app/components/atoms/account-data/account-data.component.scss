@@ -1,0 +1,47 @@
+.account-data {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 20px 16px 16px 16px;
+    color: var(--bhd-color-text);
+    row-gap: 14px;
+    border-radius: 8px;
+    border: 1px solid #aab7aa;
+    border-left: 4px solid var(--green-main);
+
+    p {
+        margin: 0;
+    }
+
+    .account-data__info {
+        display: flex;
+        column-gap: 16px;
+
+        ion-icon {
+            font-size: 40px;
+        }
+    }
+
+    .account-data__balance {
+        display: flex;
+        flex-direction: column;
+
+        .balance__main {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+
+            .main__currency {
+                font-size: 32px;
+            }
+
+            .main__balance {
+                span {
+                    &:first-of-type {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -42,7 +42,11 @@ hr {
 .logout__button {
     display: block;
     text-align: center;
+    font-size: 18px;
     padding: 20px 0;
+    margin: 0 auto;
+    background-color: transparent;
+    color: var(--green-main);
 }
 
 ion-item {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { UserService } from 'src/app/services/user/user.service';
+import { resetProducts } from 'src/state/products/products.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-side-menu',
@@ -11,10 +13,17 @@ export class SideMenuComponent implements OnInit {
 
   userInfo = this.userService.getUserInfo();
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    private authService: AuthService,
+    private store: Store) { }
+
+  logOutUser(){
+    this.store.dispatch(resetProducts());
+    this.authService.logOutUser();
+  }
 
   ngOnInit() {
-    console.log(this.userInfo);
   }
 
 }

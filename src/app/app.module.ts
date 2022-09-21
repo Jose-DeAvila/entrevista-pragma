@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
+import { StoreModule } from '@ngrx/store';
+import { productReducer } from '../state/products/products.reducer';
 
 const getBaseUrl = () => environment.backendUrl;
 
@@ -22,7 +24,8 @@ const getBaseUrl = () => environment.backendUrl;
     AppRoutingModule,
     ComponentsModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ products: productReducer })
   ],
   providers: [
     {

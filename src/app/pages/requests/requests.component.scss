@@ -1,4 +1,4 @@
-.my-products__header {
+.requests__header {
     display: flex;
     align-items: center;
     background-color: rgb(255 255 255);
@@ -25,17 +25,22 @@
 
 main {
     height: 100%;
-    color: black;
+    color: var(--bhd-color-text);
     background-color: rgb(245 246 249);
     padding: 10px 0;
     overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .accounts {
-        .accounts__accounts-list {
-            padding: 0 16px;
-            display: flex;
-            flex-direction: column;
-            row-gap: 14px;
+    .content {
+        text-align: center;
+        h1 {
+            padding: 0 43px;
+        }
+
+        p {
+            padding: 10px 30px;
         }
     }
 }
